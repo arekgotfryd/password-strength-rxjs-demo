@@ -1,0 +1,11 @@
+<label class="label" for="password">Password</label>
+<form [formGroup]="passwordForm">
+  <input type="password" formControlName="password" />
+</form>
+<label class="label" for="passwordStrength">Password Strength</label>
+<progress
+  name="passwordStrength"
+  [className]="progressClass$ | async"
+  [value]="passwordStrength$ | async"
+  max="100"
+></progress>
